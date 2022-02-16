@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
     - run: ls
     - run: python ./src/attack_nav_mod.py --mbc-content-location ./mbc/mbc.json
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v1
       with:
         name: mbc-attack-nav
         path: mbc-attack-nav-modified.json
