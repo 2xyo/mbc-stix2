@@ -11,8 +11,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-
-    - run: python /src/attack_nav_mod.py 
+    - run: ls
+    - run: python ./src/attack_nav_mod.py 
 
     - uses: actions/upload-artifact@v2
       with:
