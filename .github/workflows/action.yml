@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: ls
-    - run: python ./src/attack_nav_mod.py 
+    - run: python ./src/attack_nav_mod.py --mbc-content-location ./mbc/mbc.json
 
     - uses: actions/upload-artifact@v2
       with:
