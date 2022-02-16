@@ -1,9 +1,20 @@
-steps:
-- uses: actions/checkout@v2
+name: default
 
-- run: python /src/attack_nav_mod.py 
+on:
+  push:
+    branches:
+    - '*'
 
-- uses: actions/upload-artifact@v2
-  with:
-    name: mbc-attack-nav
-    path: mbc-attack-nav-modified.json
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - run: python /src/attack_nav_mod.py 
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: mbc-attack-nav
+        path: mbc-attack-nav-modified.json
