@@ -14,7 +14,7 @@ jobs:
     - run: ls
     - run: python ./src/attack_nav_mod.py --mbc-content-location ./mbc/mbc.json
 
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2
       with:
-        name: mbc-attack-nav
+        name: mbc-attack-nav-modified.json
         path: mbc-attack-nav-modified.json
